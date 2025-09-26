@@ -52,12 +52,12 @@ Mensaje: ${formData.mensaje}`
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4">
-              Estamos Aquí para Ti
+              Estamos Aca para vos
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary text-balance">Contactanos</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              ¿Tienes preguntas sobre nuestros servicios? ¿Quieres reservar una cancha o conocer más sobre nuestras
-              membresías? Estamos aquí para ayudarte.
+              ¿Tenes preguntas sobre nuestros servicios? ¿Queres reservar una cancha o conocer más sobre nuestras
+              membresías? Estamos aca para ayudarte.
             </p>
           </div>
         </div>
@@ -174,7 +174,7 @@ Mensaje: ${formData.mensaje}`
                           </div>
                           <div className="mt-3 p-3 bg-primary/10 rounded-lg border border-primary/20">
                             <p className="text-sm text-foreground font-medium">
-                              <strong className="text-primary">Visitas:</strong> Puedes acercarte a conocer nuestras
+                              <strong className="text-primary">Visitas:</strong> Podes acercarte a conocer nuestras
                               instalaciones cuando desees durante nuestros horarios de atención.
                             </p>
                           </div>

@@ -146,7 +146,7 @@ export default function HomePage() {
             Reservas y Consultas
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto animate-in slide-in-from-bottom duration-1000 delay-400">
-            Únete a nuestra comunidad deportiva y disfruta de las mejores instalaciones en Reconquista.
+            Únite a nuestra comunidad deportiva y disfruta de las mejores instalaciones en Reconquista.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in slide-in-from-bottom duration-1000 delay-600">
             <Button asChild size="lg" variant="secondary" className="transition-all duration-300 hover:scale-105">

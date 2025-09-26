@@ -238,7 +238,7 @@ export default function ServiciosPage() {
                     </div>
                     <div className="mt-4 p-3 bg-primary/10 rounded-lg border border-primary/20">
                       <p className="text-sm text-foreground font-medium">
-                        <strong className="text-primary">Visitas:</strong> Puedes acercarte a conocer nuestras
+                        <strong className="text-primary">Visitas:</strong> Podes acercarte a conocer nuestras
                         instalaciones cuando desees durante nuestros horarios de atención.
                       </p>
                     </div>

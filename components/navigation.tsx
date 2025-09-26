@@ -24,7 +24,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/20250925_150830.jpg-IlfqNISC7C1InwBWdIZbNYhwbFyhIE.jpeg"
+              src="/images/design-mode/20250925_150830.jpg(1).jpeg"
               alt="MiniClub Almafuerte Logo"
               width={40}
               height={40}
