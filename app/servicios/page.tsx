@@ -7,6 +7,12 @@ import Link from "next/link"
 import { Dumbbell, Users, Lightbulb, Clock, CheckCircle, MapPin, Phone, Instagram } from "lucide-react"
 
 export default function ServiciosPage() {
+  const phoneNumber = "5493482647277"
+
+  const createWhatsAppLink = (message: string) => {
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  }
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -86,7 +92,15 @@ export default function ServiciosPage() {
                   </div>
 
                   <Button asChild className="w-full">
-                    <Link href="/contacto">Consultar Disponibilidad</Link>
+                    <a
+                      href={createWhatsAppLink(
+                        "¡Hola! Me interesa el gimnasio completo del MiniClub Almafuerte. ¿Podrían darme más información sobre la membresía mensual de $20.000?",
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Consultar Gimnasio por WhatsApp
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -111,29 +125,54 @@ export default function ServiciosPage() {
                     <Users className="h-6 w-6 text-secondary" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl">Alquiler de Canchas</CardTitle>
+                    <CardTitle className="text-2xl">Fútbol 5</CardTitle>
                     <p className="text-muted-foreground">Césped sintético de primera calidad</p>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-4 bg-muted/30 rounded-lg">
-                      <div className="flex items-center justify-center mb-2">
-                        <Clock className="h-5 w-5 text-muted-foreground mr-2" />
-                        <span className="font-semibold">Sin Luz</span>
+                <div className="space-y-6">
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-lg text-primary">Lunes a Viernes</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <div className="flex items-center justify-center mb-2">
+                          <Clock className="h-5 w-5 text-muted-foreground mr-2" />
+                          <span className="font-semibold">Sin Luz</span>
+                        </div>
+                        <div className="text-2xl font-bold text-primary">$23.000</div>
+                        <div className="text-sm text-muted-foreground">por hora</div>
                       </div>
-                      <div className="text-2xl font-bold text-primary">$4.000</div>
-                      <div className="text-sm text-muted-foreground">por hora</div>
+                      <div className="text-center p-4 bg-secondary/10 rounded-lg">
+                        <div className="flex items-center justify-center mb-2">
+                          <Lightbulb className="h-5 w-5 text-secondary mr-2" />
+                          <span className="font-semibold">Con Luz</span>
+                        </div>
+                        <div className="text-2xl font-bold text-secondary">$25.000</div>
+                        <div className="text-sm text-muted-foreground">por hora</div>
+                      </div>
                     </div>
-                    <div className="text-center p-4 bg-secondary/10 rounded-lg">
-                      <div className="flex items-center justify-center mb-2">
-                        <Lightbulb className="h-5 w-5 text-secondary mr-2" />
-                        <span className="font-semibold">Con Luz</span>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-lg text-primary">Sábados, Domingos y Feriados</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center p-4 bg-muted/30 rounded-lg">
+                        <div className="flex items-center justify-center mb-2">
+                          <Clock className="h-5 w-5 text-muted-foreground mr-2" />
+                          <span className="font-semibold">Sin Luz</span>
+                        </div>
+                        <div className="text-2xl font-bold text-primary">$25.000</div>
+                        <div className="text-sm text-muted-foreground">por hora</div>
                       </div>
-                      <div className="text-2xl font-bold text-secondary">$5.500</div>
-                      <div className="text-sm text-muted-foreground">por hora</div>
+                      <div className="text-center p-4 bg-secondary/10 rounded-lg">
+                        <div className="flex items-center justify-center mb-2">
+                          <Lightbulb className="h-5 w-5 text-secondary mr-2" />
+                          <span className="font-semibold">Con Luz</span>
+                        </div>
+                        <div className="text-2xl font-bold text-secondary">$28.000</div>
+                        <div className="text-sm text-muted-foreground">por hora</div>
+                      </div>
                     </div>
                   </div>
 
@@ -157,7 +196,15 @@ export default function ServiciosPage() {
                   </div>
 
                   <Button asChild variant="secondary" className="w-full">
-                    <Link href="/contacto">Reservar Cancha</Link>
+                    <a
+                      href={createWhatsAppLink(
+                        "¡Hola! Quiero reservar la cancha de fútbol 5 del MiniClub Almafuerte. ¿Podrían decirme la disponibilidad y confirmar los precios?",
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Reservar Cancha por WhatsApp
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -177,7 +224,7 @@ export default function ServiciosPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Eventos */}
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="pt-8">
@@ -189,7 +236,15 @@ export default function ServiciosPage() {
                   Espacio perfecto para cumpleaños, celebraciones y reuniones familiares con vista a las canchas.
                 </p>
                 <Button asChild variant="outline" className="w-full bg-transparent">
-                  <Link href="/contacto">Consultar Precios</Link>
+                  <a
+                    href={createWhatsAppLink(
+                      "¡Hola! Me interesa el espacio para eventos familiares del MiniClub Almafuerte. ¿Podrían darme información sobre precios y disponibilidad?",
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Consultar Eventos por WhatsApp
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -205,7 +260,42 @@ export default function ServiciosPage() {
                   Disfruta de partidos de futbolín mientras esperas tu turno o después del entrenamiento.
                 </p>
                 <Button asChild variant="outline" className="w-full bg-transparent">
-                  <Link href="/contacto">Más Información</Link>
+                  <a
+                    href={createWhatsAppLink(
+                      "¡Hola! Me interesa saber más sobre la mesa de futbolín del MiniClub Almafuerte. ¿Está disponible para usar?",
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Consultar Futbolín por WhatsApp
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="pt-8">
+                <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="text-4xl">🔥</div>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Servicio de Parrillero</h3>
+                <div className="text-center mb-4">
+                  <div className="text-3xl font-bold text-primary">$5.000</div>
+                  <div className="text-sm text-muted-foreground">por evento</div>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Parrillero profesional para tus eventos. Perfecto para asados familiares y celebraciones.
+                </p>
+                <Button asChild variant="outline" className="w-full bg-transparent">
+                  <a
+                    href={createWhatsAppLink(
+                      "¡Hola! Quiero contratar el servicio de parrillero del MiniClub Almafuerte por $5.000. ¿Podrían darme más detalles sobre el servicio?",
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contratar Parrillero por WhatsApp
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -288,7 +378,15 @@ export default function ServiciosPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="secondary">
-              <Link href="/contacto">Contactar Ahora</Link>
+              <a
+                href={createWhatsAppLink(
+                  "¡Hola! Me interesa conocer más sobre todos los servicios del MiniClub Almafuerte. ¿Podrían brindarme información completa?",
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contactar por WhatsApp
+              </a>
             </Button>
             <Button
               asChild

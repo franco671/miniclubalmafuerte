@@ -5,6 +5,12 @@ import Link from "next/link"
 import { Dumbbell, Users, Calendar, MapPin, Phone, Instagram } from "lucide-react"
 
 export default function HomePage() {
+  const phoneNumber = "5493482647277"
+
+  const createWhatsAppLink = (message: string) => {
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  }
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -34,7 +40,15 @@ export default function HomePage() {
               size="lg"
               className="border-white text-white hover:bg-white hover:text-primary bg-transparent transition-all duration-300 hover:scale-105"
             >
-              <Link href="/contacto">Contactanos</Link>
+              <a
+                href={createWhatsAppLink(
+                  "¡Hola! Me interesa conocer más sobre los servicios del MiniClub Almafuerte. ¿Podrían brindarme más información?",
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contactanos por WhatsApp
+              </a>
             </Button>
           </div>
         </div>
